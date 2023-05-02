@@ -161,12 +161,12 @@ public class StudentDAO {
 			conn = DBManager.getConnection();
 			psmt = conn.prepareStatement(sql);
 			
-			psmt.setInt(1, mDto.getStudno());
-			psmt.setString(2, mDto.getStudname());
-			psmt.setInt(3, mDto.getKorean());
-			psmt.setInt(4, mDto.getEnglish());
-			psmt.setInt(5, mDto.getMath());
-			psmt.setInt(6, mDto.getHistory());
+			psmt.setString(1, mDto.getStudname());
+			psmt.setInt(2, mDto.getKorean());
+			psmt.setInt(3, mDto.getEnglish());
+			psmt.setInt(4, mDto.getMath());
+			psmt.setInt(5, mDto.getHistory());
+			psmt.setInt(6, mDto.getStudno());
 			
 			psmt.executeUpdate();
 		}catch(Exception e) {
